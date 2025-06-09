@@ -1,61 +1,141 @@
-HTML (index.html):
-
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Quiz Maker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #e0f7fa, #ffffff);
+            color: #333;
+        }
+        header, nav, footer {
+            background-color: #006064;
+            color: white;
+            padding: 1em;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 1em;
+            text-decoration: none;
+        }
+        .container {
+            padding: 2em;
+        }
+        .form-section {
+            margin-bottom: 2em;
+            background-color: #f1f1f1;
+            padding: 1em;
+            border-radius: 8px;
+        }
+        input, textarea, select, button {
+            display: block;
+            width: 100%;
+            margin: 0.5em 0;
+            padding: 0.5em;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: #00796b;
+            color: white;
+            cursor: pointer;
+        }
+        @media (max-width: 600px) {
+            body {
+                font-size: 14px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Your Name</h1>
-    <p>Web Developer | Designer | Tech Enthusiast</p>
-  </header>
+    <header>
+        <h1>Online Quiz Maker</h1>
+        <p>Welcome! Create and take quizzes with ease.</p>
+    </header>
+    <nav>
+        <a href="#create">Create Quiz</a>
+        <a href="#list">Quiz List</a>
+        <a href="#login">Login</a>
+        <a href="#register">Register</a>
+    </nav><div class="container">
+    <!-- Quiz Creation -->
+    <section id="create" class="form-section">
+        <h2>Create a Quiz</h2>
+        <form>
+            <input type="text" placeholder="Quiz Title" required>
+            <textarea placeholder="Enter your question here..." required></textarea>
+            <input type="text" placeholder="Option A">
+            <input type="text" placeholder="Option B">
+            <input type="text" placeholder="Option C">
+            <input type="text" placeholder="Option D">
+            <select>
+                <option value="">Select correct answer</option>
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+                <option value="D">D</option>
+            </select>
+            <button type="submit">Add Question</button>
+        </form>
+    </section>
 
-  <section id="about">
-    <img src="your-photo.jpg" alt="Your Photo">
-    <p>Hello! I'm a passionate web developer with experience in HTML, CSS, and JavaScript. I love building beautiful and functional websites.</p>
-  </section>
+    <!-- Quiz List -->
+    <section id="list" class="form-section">
+        <h2>Available Quizzes</h2>
+        <ul>
+            <li><a href="#quiz1">Quiz 1 - General Knowledge</a></li>
+            <li><a href="#quiz2">Quiz 2 - Science</a></li>
+            <!-- Add dynamic listing here -->
+        </ul>
+    </section>
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>HTML & CSS</li>
-      <li>JavaScript</li>
-      <li>Responsive Design</li>
-      <li>Git & GitHub</li>
-    </ul>
-  </section>
+    <!-- Quiz Taking (Mockup for Quiz 1) -->
+    <section id="quiz1" class="form-section">
+        <h2>Take Quiz - General Knowledge</h2>
+        <p>Question 1: What is the capital of France?</p>
+        <button>Paris</button>
+        <button>Berlin</button>
+        <button>Rome</button>
+        <button>Madrid</button>
+    </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project">
-      <img src="project1.jpg" alt="Project 1">
-      <h3>Project One</h3>
-      <p>Description of your project goes here.</p>
-    </div>
-    <div class="project">
-      <img src="project2.jpg" alt="Project 2">
-      <h3>Project Two</h3>
-      <p>Description of your project goes here.</p>
-    </div>
-  </section>
+    <!-- Quiz Results -->
+    <section id="results" class="form-section">
+        <h2>Quiz Results</h2>
+        <p>Your Score: 3/5</p>
+        <p>Correct Answers:</p>
+        <ul>
+            <li>Q1: Paris</li>
+            <li>Q2: Mars</li>
+            <!-- More answers -->
+        </ul>
+    </section>
 
-  <section id="resume">
-    <h2>Resume</h2>
-    <a href="Your_Resume.pdf" download>Download My Resume</a>
-  </section>
+    <!-- User Login -->
+    <section id="login" class="form-section">
+        <h2>Login</h2>
+        <input type="text" placeholder="Username">
+        <input type="password" placeholder="Password">
+        <button>Login</button>
+    </section>
 
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <p>Email: youremail@example.com</p>
-    <p>Phone: 123-456-7890</p>
-  </section>
+    <!-- User Registration -->
+    <section id="register" class="form-section">
+        <h2>Register</h2>
+        <input type="text" placeholder="Username">
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Password">
+        <button>Register</button>
+    </section>
+</div>
 
-  <footer>
-    <p>&copy; 2025 Your Name. All rights reserved.</p>
-  </footer>
+<footer>
+    <p>&copy; 2025 Online Quiz Maker. All rights reserved.</p>
+</footer>
+
 </body>
 </html>
